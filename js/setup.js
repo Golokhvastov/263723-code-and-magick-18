@@ -12,9 +12,9 @@ var getRandomWizard = function () {
   var randomCoatColor = WIZARD_COAT_COLORS[Math.floor(Math.random() * WIZARD_COAT_COLORS.length)];
   var randomEyesColor = WIZARD_EYES_COLORS[Math.floor(Math.random() * WIZARD_EYES_COLORS.length)];
   return {
-    name : randomName + ' ' + randomSurname,
-    coatColor : randomCoatColor,
-    eyesColor : randomEyesColor
+    name: randomName + ' ' + randomSurname,
+    coatColor: randomCoatColor,
+    eyesColor: randomEyesColor
   };
 };
 
