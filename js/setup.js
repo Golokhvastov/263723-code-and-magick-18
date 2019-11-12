@@ -46,7 +46,7 @@ var renderSimilarWizards = function (list, template, wizards) {
   list.appendChild(fragment);
 };
 
-var onPopupEscPress = function(evt) {
+var onPopupEscPress = function (evt) {
   if (document.activeElement !== setupUserName) {
     if (evt.keyCode === ESC_KEYCODE) {
       closePopup();
@@ -54,44 +54,44 @@ var onPopupEscPress = function(evt) {
   }
 };
 
-var onButtonSubmitClick = function() {
+var onButtonSubmitClick = function () {
   setupForm.submit();
 };
 
-var onButtonSubmitPress = function(evt) {
+var onButtonSubmitPress = function (evt) {
   if (evt.keyCode === ENTER_KEYCODE) {
     onButtonSubmitClick();
   }
 };
 
-var onWizardCoatClick = function() {
+var onWizardCoatClick = function () {
   coatColorNumber++;
-  if (coatColorNumber == WIZARD_COAT_COLORS.length) {
+  if (coatColorNumber === WIZARD_COAT_COLORS.length) {
     coatColorNumber = 0;
   }
   wizardCoat.style.fill = WIZARD_COAT_COLORS[coatColorNumber];
   wizardCoatInput.value = WIZARD_COAT_COLORS[coatColorNumber];
 };
 
-var onWizardEyesClick = function() {
+var onWizardEyesClick = function () {
   eyesColorNumber++;
-  if (eyesColorNumber == WIZARD_EYES_COLORS.length) {
+  if (eyesColorNumber === WIZARD_EYES_COLORS.length) {
     eyesColorNumber = 0;
   }
   wizardEyes.style.fill = WIZARD_EYES_COLORS[eyesColorNumber];
   wizardEyesInput.value = WIZARD_EYES_COLORS[eyesColorNumber];
 };
 
-var onWizardFireballClick = function() {
+var onWizardFireballClick = function () {
   fireballColorNumber++;
-  if (fireballColorNumber == WIZARD_FIREBALL_COLORS.length) {
+  if (fireballColorNumber === WIZARD_FIREBALL_COLORS.length) {
     fireballColorNumber = 0;
   }
   wizardFireball.style.backgroundColor = WIZARD_FIREBALL_COLORS[fireballColorNumber];
   wizardFireballInput.value = WIZARD_FIREBALL_COLORS[fireballColorNumber];
 };
 
-var openPopup = function() {
+var openPopup = function () {
   setup.classList.remove('hidden');
   document.addEventListener('keydown', onPopupEscPress);
   setupSubmit.addEventListener('click', onButtonSubmitClick);
@@ -102,7 +102,7 @@ var openPopup = function() {
   wizardFireball.addEventListener('click', onWizardFireballClick);
 };
 
-var closePopup = function() {
+var closePopup = function () {
   setup.classList.add('hidden');
   document.removeEventListener('keydown', onPopupEscPress);
   setupSubmit.removeEventListener('click', onButtonSubmitClick);
